@@ -6,19 +6,15 @@ void subarrsum(int *arr,int n){
     int maxsum=INT_MIN;
 
     for(int i=0;i<n;i++){
+        int csum=0;
         for(int j=i;j<n;j++){
-            int csum=0;
-            for(int k=i;k<=j;k++){
-                csum += arr[k];
-            }
+            csum +=arr[j];
             // cout<<csum;
             maxsum=max(maxsum,csum);
-            
-
         }
         //cout<<endl;
     }
-     cout<<"max sum of arr is "<<maxsum;
+     cout<<"max sum of arr is : "<<maxsum;
 }
 
 
